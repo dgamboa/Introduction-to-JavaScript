@@ -271,8 +271,30 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(stringParam) {
+  let arrayParam = [...stringParam.toLowerCase()];
+  let counter = 0;
+  for (i = 0; i < arrayParam.length; i++) {
+    if (arrayParam[i] === "a" ||
+        arrayParam[i] === "e" ||
+        arrayParam[i] === "i" ||
+        arrayParam[i] === "o" ||
+        arrayParam[i] === "u") {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+function vowelCounterRefactor(stringParam) {
+  let arrayParam = [...stringParam.toLowerCase()];
+  let counter = 0;
+  arrayParam.forEach( function(letter) {
+    if (["a", "e", "i", "o", "u"].indexOf(letter) != -1) {
+      counter++;
+    }
+  })
+  return counter;
 }
 
 
