@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 21;
+if (votingAge >= 18) {
+  true;
+}
 
 
 /*
@@ -30,9 +33,11 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let oneBeOne = "Hello";
+const oneBeTwo = "Bye";
+if (oneBeTwo === "Bye") {
+  oneBeOne = "Oh OK, cya!";
+}
 
 
 /*
@@ -45,8 +50,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let oneCeOne = "1999";
+Number(oneCeOne);
 
 
 /*
