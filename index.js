@@ -62,10 +62,9 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
 function multiply(a, b){
-    return a * b;
-  }
+  return a * b;
+}
 
 
 
@@ -79,9 +78,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+  return humanYears * 7;
 }
+
+dogYears(12);
 
 
 
@@ -112,10 +113,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, years){
+  if (years >= 1) {
+    if (weight <= 5) {
+      return weight * 0.05;
+    } else if (weight <= 10) {
+      return weight * 0.04;
+    } else if (weight <= 15) {
+      return weight * 0.03;
+    } else {
+      return weight * 0.02;
+    }
+  } else {
+    if (years < 4/12) {
+      return weight * 0.10;
+    } else if (years < 7/12) {
+      return weight * 0.05;
+    } else {
+      return weight * 0.04;
+    }
   }
-
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -138,10 +156,32 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
 function game(user, computer){
-    /*add your code here*/
+  let userChoice = user.toLowerCase();
+  let compChoice = computer.toLowerCase();
+  console.log(userChoice, compChoice);
+  if (userChoice === compChoice) {
+    return "it's a tie";
+  } else if ((userChoice === "scissors" && compChoice === "paper") ||
+             (userChoice === "paper" && compChoice === "rock") ||
+             (userChoice === "rock" && compChoice === "scissors")) {
+    return "you win!";
+  } else {
+    return "you lose!";
+  }  
 }
+
+let computerChoiceNumber = Math.random()
+let computerChoice = "";
+if (computerChoiceNumber < 1/3) {
+  computerChoice = "Rock";  
+} else if (computerChoiceNumber < 2/3) {
+  computerChoice = "Paper";
+} else {
+  computerChoice = "Scissors";
+}
+
+console.log(game("Paper", "Paper"));
   
   
 
