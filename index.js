@@ -159,7 +159,6 @@ Use the game function below to do the following:
 function game(user, computer){
   let userChoice = user.toLowerCase();
   let compChoice = computer.toLowerCase();
-  console.log(userChoice, compChoice);
   if (userChoice === compChoice) {
     return "it's a tie";
   } else if ((userChoice === "scissors" && compChoice === "paper") ||
@@ -181,9 +180,6 @@ if (computerChoiceNumber < 1/3) {
   computerChoice = "Scissors";
 }
 
-console.log(game("Paper", "Paper"));
-  
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -192,14 +188,12 @@ console.log(game("Paper", "Paper"));
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
-
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function miles(km){
+  return km * 0.621371;
+}
 
 
 //Task 5b - Feet to CM
@@ -209,11 +203,9 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm){
+  return cm / 30.48;
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -226,9 +218,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(n){
+  let counter = n;
+  while (counter > 0) {
+    return `${counter} bottles of soda on the wall, ${counter} bottles of soda, take one down pass it around ${counter - 1} bottles of soda on the wall`;
+    counter--;
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
